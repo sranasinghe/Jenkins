@@ -20,6 +20,7 @@ The purpose of this document is to cover all the steps required to bring up Dev 
 * [Ratatoskr](#ratatoskr)
 * [Haproxy](#haproxy)
 * [Nagios](#nagios)
+* [Splunk](#splunk)
 * [Connection Details](#connection-details)
 * [VPN Setup](#vpn-setup)
 
