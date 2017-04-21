@@ -540,6 +540,22 @@ time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "target
 ```bash
 time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_frontenddevindex1" -e "remoteuser=ubuntu" -e "application_name=frontendindex" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
 ```
+#### Configure splunk for biorecs web [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_biorecsdev1" -e "remoteuser=ubuntu" -e "application_name=biorecsweb" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
+#### Configure splunk for biorecs bg [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_biorecsdev1" -e "remoteuser=ubuntu" -e "application_name=biorecsbg" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
+#### Configure splunk for Nest web [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_nestdev1" -e "remoteuser=ubuntu" -e "application_name=nestweb" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
+#### Configure splunk for Nest bg [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_nestdevbg1" -e "remoteuser=ubuntu" -e "application_name=nestbg" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
 
 ## Connection Details
 
