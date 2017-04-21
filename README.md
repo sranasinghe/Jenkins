@@ -527,7 +527,18 @@ time ansible-playbook -i /etc/ansible/ec2.py role-ansible-nagios-config.yml -e "
 3. On successful run we should be able to view the new host monitor under nagios->services
 
 ## Splunk
-
+#### Configure splunk for frontend web [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_frontenddevweb1" -e "remoteuser=ubuntu" -e "application_name=frontendweb" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
+#### Configure splunk for frontend bg [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_frontenddevbg1" -e "remoteuser=ubuntu" -e "application_name=frontendbg" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
+#### Configure splunk for frontend index [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_frontenddevindex1" -e "remoteuser=ubuntu" -e "application_name=frontendindex" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
 
 ## Connection Details
 
