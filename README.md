@@ -556,6 +556,18 @@ time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "target
 ```bash
 time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_nestdevbg1" -e "remoteuser=ubuntu" -e "application_name=nestbg" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
 ```
+#### Configure splunk for ratatoskr App [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_ratatoskrdev1" -e "remoteuser=ubuntu" -e "application_name=ratatoskrweb" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
+#### Configure splunk for Ratatoskr bg [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_ratatoskrdev1" -e "remoteuser=ubuntu" -e "application_name=ratatoskrbg" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
+#### Configure splunk for Rabbitmq [Ansible Repo]
+```bash
+time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_rabbitmqdev1" -e "remoteuser=ubuntu" -e "application_name=ratatoskrbg" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
+```
 
 ## Connection Details
 
