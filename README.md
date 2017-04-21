@@ -531,6 +531,8 @@ time ansible-playbook -i /etc/ansible/ec2.py role-ansible-nagios-config.yml -e "
 
 After deploying the applications(Frontend, Biorecs , nest and ratatoskr) when you run following scripts will install and configure the splunk forwarder monitors. This will report all configured logs to an index = keas in the splunk server
 
+**Note: Ensure that splunk role is run only after the application deployment as this role requires the log files need to be present on the servers**
+
 #### Configure splunk for frontend web [Ansible Repo]
 ```bash
 time ansible-playbook -i /etc/ansible/ec2.py role-splunkforwarder.yml -e "targethost=tag_Name_frontenddevweb1" -e "remoteuser=ubuntu" -e "application_name=frontendweb" --private-key=/home/vagrant/.ssh/ec2deploystagedev.pem --vault-password-file=~/.ssh/vault.password
